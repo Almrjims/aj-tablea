@@ -260,12 +260,12 @@ function Prepare() {
 }
 
 const reasons = [
-  { i: "🤲", t: "Homemade", d: "Every disc shaped by hand in small batches." },
-  { i: "📜", t: "Traditional Recipe", d: "A heritage formula from our grandmother." },
-  { i: "🏡", t: "Family Heritage", d: "Inspired by generations of Filipino kitchens." },
-  { i: "🤍", t: "Made with Care", d: "Slow, patient, never rushed." },
-  { i: "🌱", t: "Authentic Taste", d: "Pure cacao — nothing artificial." },
-  { i: "🏝️", t: "From Bohol", d: "Crafted at the heart of the islands." },
+  { n: "01", t: "Homemade", d: "Every disc shaped by hand in small batches." },
+  { n: "02", t: "Traditional Recipe", d: "A heritage formula from our grandmother." },
+  { n: "03", t: "Family Heritage", d: "Inspired by generations of Filipino kitchens." },
+  { n: "04", t: "Made with Care", d: "Slow, patient, never rushed." },
+  { n: "05", t: "Authentic Taste", d: "Pure cacao — nothing artificial." },
+  { n: "06", t: "From Bohol", d: "Crafted at the heart of the islands." },
 ];
 
 function Why() {
@@ -280,7 +280,8 @@ function Why() {
           {reasons.map((r, i) => (
             <Reveal key={r.t} delay={i * 80}>
               <div className="bg-card border-2 border-border rounded-2xl p-8 h-full hover:border-accent/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300">
-                <div className="text-4xl font-serif">{r.i}</div>
+                <span className="font-serif text-sm tracking-[0.3em] text-accent/80 font-medium">{r.n}</span>
+                <div className="mt-4 h-px w-10 bg-accent/40" />
                 <h3 className="mt-5 font-serif text-xl text-primary font-semibold">{r.t}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed font-light">{r.d}</p>
               </div>
