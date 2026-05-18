@@ -216,11 +216,27 @@ function Products() {
   );
 }
 
-const steps = [
-  { n: "01", t: "Boil", d: "Bring water or milk gently to a boil in your kaldero." },
-  { n: "02", t: "Add Tablea", d: "Drop in 1–2 tablea discs per cup." },
-  { n: "03", t: "Stir", d: "Whisk with a batirol until fully melted and frothy." },
-  { n: "04", t: "Enjoy", d: "Pour into your favorite cup and savor the warmth." },
+const recipes = [
+  {
+    title: "Traditional Sikwate",
+    subtitle: "Simple, warm, and rewarding.",
+    steps: [
+      { n: "01", t: "Boil", d: "Bring water or milk gently to a boil in your kaldero." },
+      { n: "02", t: "Add Tablea", d: "Drop in 1–2 tablea discs per cup." },
+      { n: "03", t: "Stir", d: "Whisk with a batirol until fully melted and frothy." },
+      { n: "04", t: "Enjoy", d: "Pour into your favorite cup and savor the warmth." },
+    ],
+  },
+  {
+    title: "Iced Tablea Drink",
+    subtitle: "Cold, rich, and refreshing.",
+    steps: [
+      { n: "01", t: "Melt Tablea", d: "Mix melted tablea with hot water until smooth." },
+      { n: "02", t: "Add Milk", d: "Pour in cold milk and stir well." },
+      { n: "03", t: "Add Ice", d: "Fill the glass with ice cubes." },
+      { n: "04", t: "Serve", d: "Enjoy your chilled homemade chocolate drink." },
+    ],
+  },
 ];
 
 function Prepare() {
@@ -232,20 +248,32 @@ function Prepare() {
       </div>
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <p className="divider-leaf text-[11px] uppercase tracking-[0.35em] font-semibold"><span>Sample Recipe</span></p>
+          <p className="divider-leaf text-[11px] uppercase tracking-[0.35em] font-semibold"><span>Recipes</span></p>
           <h2 className="mt-8 font-serif text-4xl sm:text-5xl text-primary font-semibold">How to Prepare</h2>
-          <p className="mt-6 text-muted-foreground text-lg font-light leading-relaxed">A four-step Recipe on traditional sikwate. Simple, warm, and rewarding.</p>
+          <p className="mt-6 text-muted-foreground text-lg font-light leading-relaxed">Two ways to enjoy our homemade tablea. Choose your warmth.</p>
         </Reveal>
 
-        <div className="mt-20 grid md:grid-cols-4 gap-8">
-          {steps.map((s, i) => (
-            <Reveal key={s.n} delay={i * 100}>
-              <div className="relative bg-card/90 backdrop-blur-sm border-2 border-border rounded-2xl p-8 h-full hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
-                <span className="font-serif text-6xl text-accent/60 font-light">{s.n}</span>
-                <h3 className="mt-4 font-serif text-2xl text-primary font-semibold">{s.t}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed font-light">{s.d}</p>
+        <div className="mt-20 space-y-24">
+          {recipes.map((recipe, ri) => (
+            <div key={recipe.title}>
+              <Reveal delay={ri * 80}>
+                <div className="text-center mb-10">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-primary font-semibold">{recipe.title}</h3>
+                  <p className="mt-3 text-muted-foreground text-base font-light">{recipe.subtitle}</p>
+                </div>
+              </Reveal>
+              <div className="grid md:grid-cols-4 gap-8">
+                {recipe.steps.map((s, i) => (
+                  <Reveal key={`${recipe.title}-${s.n}`} delay={i * 100 + ri * 80}>
+                    <div className="relative bg-card/90 backdrop-blur-sm border-2 border-border rounded-2xl p-8 h-full hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
+                      <span className="font-serif text-6xl text-accent/60 font-light">{s.n}</span>
+                      <h4 className="mt-4 font-serif text-2xl text-primary font-semibold">{s.t}</h4>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed font-light">{s.d}</p>
+                    </div>
+                  </Reveal>
+                ))}
               </div>
-            </Reveal>
+            </div>
           ))}
         </div>
       </div>
