@@ -3,8 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import heroImg from "@/assets/hero-tsokolate.png";
 import makerImg from "@/assets/maker.jpg";
 import prodTraditional from "@/assets/product-traditional.png";
-import prodPure from "@/assets/product-pure.png";
-import prodTsokolate from "@/assets/product-tsokolate.jpg";
 import cacaoImg from "@/assets/cacao-beans.jpg";
 import boholImg from "@/assets/bohol.jpg";
 import logo from "../assets/logo.png";
@@ -177,11 +175,12 @@ function Story() {
   );
 }
 
-const products = [
-  { img: prodTraditional, name: "Traditional Tablea", tag: "Classic", desc: "Stone-ground cacao shaped into time-honored discs — earthy, rich, and deeply nostalgic." },
-  { img: prodPure, name: "Pure Cacao Tablea", tag: "100% Cacao", desc: "Single-origin Bohol cacao, unsweetened and bold. The purest taste of the bean." },
-  { img: prodTsokolate, name: "Homemade Tsokolate", tag: "Ready to Drink", desc: "Frothy, comforting, batirol-whisked Filipino hot chocolate ready to warm your morning." },
-];
+const product = {
+  img: prodTraditional,
+  label: "Traditional",
+  name: "Traditional Homemade Tablea",
+  desc: "Stone-ground cacao shaped into rich, earthy discs. Made by hand in small batches, with the same care passed down from our lola.",
+};
 
 function Products() {
   return (
@@ -189,31 +188,28 @@ function Products() {
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="text-center max-w-2xl mx-auto">
           <p className="divider-leaf text-[11px] uppercase tracking-[0.35em] font-semibold"><span>Our Craft</span></p>
-          <h2 className="mt-8 font-serif text-4xl sm:text-5xl text-primary font-semibold">A Small, Honest Menu</h2>
-          <p className="mt-6 text-muted-foreground text-lg font-light leading-relaxed">Each disc shaped by hand. Each batch made in small numbers, the way it should be.</p>
+          <h2 className="mt-8 font-serif text-4xl sm:text-5xl text-primary font-semibold">Our Homemade Tablea</h2>
+          <p className="mt-6 text-muted-foreground text-lg font-light leading-relaxed">One traditional recipe, handmade in small batches from cacao, just like our family has always made it.</p>
         </Reveal>
 
-        <div className="mt-20 grid md:grid-cols-3 gap-10">
-          {products.map((p, i) => (
-            <Reveal key={p.name} delay={i * 120}>
-              <article className="group bg-card border-2 border-border rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500">
-                <div className="relative overflow-hidden">
-                  <img src={p.img} alt={p.name} loading="lazy" width={1024} height={1024} className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <span className="absolute top-5 left-5 bg-background/95 backdrop-blur-sm text-[10px] uppercase tracking-[0.2em] text-primary px-4 py-2 rounded-full border-2 border-border font-semibold">
-                    {p.tag}
-                  </span>
-                </div>
-                <div className="p-8">
-                  <h3 className="font-serif text-2xl text-primary font-semibold">{p.name}</h3>
-                  <p className="mt-4 text-sm text-muted-foreground leading-relaxed font-light">{p.desc}</p>
-                  <a href="#contact" className="mt-8 inline-flex items-center text-sm text-accent font-medium hover:text-primary transition-colors duration-300">
-                    Inquire to order
-                    <span className="ml-3 transition-transform group-hover:translate-x-2 duration-300">→</span>
-                  </a>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+        <div className="mt-20 max-w-2xl mx-auto">
+          <Reveal delay={120}>
+            <article className="group bg-card border-2 border-border rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500">
+              <div className="relative overflow-hidden">
+                <img src={product.img} alt={product.name} loading="lazy" width={1024} height={1024} className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" />
+                <span className="absolute top-5 left-5 bg-background/95 backdrop-blur-sm text-[10px] uppercase tracking-[0.2em] text-primary px-4 py-2 rounded-full border-2 border-border font-semibold">
+                  {product.label}
+                </span>
+              </div>
+              <div className="p-10 text-center">
+                <h3 className="font-serif text-3xl text-primary font-semibold">{product.name}</h3>
+                <p className="mt-5 text-muted-foreground leading-relaxed font-light max-w-md mx-auto">{product.desc}</p>
+                <a href="#contact" className="mt-8 inline-flex items-center rounded-full bg-primary text-primary-foreground px-8 py-3.5 text-sm font-semibold tracking-wide hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 shadow-lg shadow-primary/20">
+                  Inquire to order
+                </a>
+              </div>
+            </article>
+          </Reveal>
         </div>
       </div>
     </section>
