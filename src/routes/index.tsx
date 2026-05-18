@@ -262,6 +262,16 @@ function Prepare() {
                 <div className="text-center mb-10">
                   <h3 className="font-serif text-2xl sm:text-3xl text-primary font-semibold">{recipe.title}</h3>
                   <p className="mt-3 text-muted-foreground text-base font-light">{recipe.subtitle}</p>
+                  <div className="mt-5 inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground font-light">
+                    {recipe.ingredients.map((ing, ii) => (
+                      <span key={ii} className="flex items-center gap-x-4">
+                        <span>{ing}</span>
+                        {ii < recipe.ingredients.length - 1 && (
+                          <span className="h-1 w-1 rounded-full bg-accent/60" />
+                        )}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Reveal>
               <div className="grid md:grid-cols-4 gap-8">
