@@ -98,14 +98,14 @@ function Hero() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="fade-up">
           <div className="divider-leaf text-[11px] uppercase tracking-[0.35em] font-semibold">
-            <span> OUR · Kabilin</span>
+            <span> Lola's · Kabilin</span>
           </div>
           <h1 className="mt-8 font-serif text-5xl sm:text-6xl lg:text-7xl text-primary text-balance leading-[1.08] font-semibold">
             Handcrafted Tablea
             <span className="block italic text-accent font-normal mt-2">from Inabanga Bohol</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed font-light">
-Traditional Filipino chocolate made with love and care, just like how our lolas used to make it, one batch at a time.          </p>
+        Traditional Filipino tablea made with care and love by our mother, following the recipe and kabilin passed down gikan sa among lola.   </p>
           <div className="mt-12 flex flex-wrap gap-5">
             <a href="#contact" className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold tracking-wide hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 shadow-lg shadow-primary/20">
               Order Now
@@ -137,7 +137,7 @@ Traditional Filipino chocolate made with love and care, just like how our lolas 
           </div>
           <div className="absolute -bottom-8 -left-8 bg-card border-2 border-primary/20 rounded-2xl px-6 py-5 shadow-xl shadow-primary/15 max-w-[240px] backdrop-blur-sm">
             <p className="font-script text-3xl text-accent leading-none font-normal">&#8220;Para sa pamilya&#8221;</p>
-            <p className="mt-2 text-xs text-muted-foreground font-medium">Made with love, like Lola used to.</p>
+            <p className="mt-2 text-xs text-muted-foreground font-medium">Made with love, sama sa paghimo ni Lola sauna.</p>
           </div>
         </div>
       </div>
@@ -177,9 +177,9 @@ function Story() {
 
 const product = {
   img: prodTraditional,
-  label: "Traditional",
+  label: "Aj's Tablea",
   name: "Traditional Homemade Tablea",
-  desc: "Stone-ground cacao shaped into rich, earthy discs. Made by hand in small batches, with the same care passed down from our lola.",
+  desc: "Grounded by hand and finely grinded into rich ug lami nga tablea, shaped into discs. Giputos with 10 tablea discs per pack and ready to serve — ikaw nay bahala unsa imong himuong recipe. Recipe ideas below.",
 };
 
 function Products() {
@@ -187,9 +187,9 @@ function Products() {
     <section id="products" className="relative py-32 lg:py-36 bg-secondary/25">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <p className="divider-leaf text-[11px] uppercase tracking-[0.35em] font-semibold"><span>Our Craft</span></p>
-          <h2 className="mt-8 font-serif text-4xl sm:text-5xl text-primary font-semibold">Our Homemade Tablea</h2>
-          <p className="mt-6 text-muted-foreground text-lg font-light leading-relaxed">One traditional recipe, handmade in small batches from cacao, just like our family has always made it.</p>
+          <p className="divider-leaf text-[11px] uppercase tracking-[0.35em] font-semibold"><span>Product</span></p>
+          <h2 className="mt-8 font-serif text-4xl sm:text-5xl text-primary font-semibold">Our Tablea</h2>
+          <p className="mt-6 text-muted-foreground text-lg font-light leading-relaxed">Usa ka family recipe nga gipasa gikan pa sa amo lola, lovingly made by hand karon sa akong mama gi himo kini from pure cacao sourced by a trusted and authentic cacao</p>
         </Reveal>
 
         <div className="mt-20 max-w-2xl mx-auto">
@@ -219,24 +219,24 @@ function Products() {
 const recipes = [
   {
     title: "Traditional Sikwate",
-    subtitle: "Simple, warm, and rewarding.",
-    ingredients: ["1–2 tablea discs", "1 cup water or milk", "Sugar or muscovado (optional)"],
+    subtitle: "Simple, warm, and lami pares sa puto.",
+    ingredients: ["1–2 tablea", "1 cup water or milk", "Sugar (optional)"],
     steps: [
-      { n: "01", t: "Boil", d: "Bring water or milk gently to a boil in your kaldero." },
-      { n: "02", t: "Add Tablea", d: "Drop in 1–2 tablea discs per cup." },
-      { n: "03", t: "Stir", d: "Whisk with a batirol until fully melted and frothy." },
-      { n: "04", t: "Enjoy", d: "Pour into your favorite cup and savor the warmth." },
+      { n: "01", t: "Boil", d: "Bring water or milk gently to a boil sa kaldero." },
+      { n: "02", t: "Add Tablea and Sugar", d: "Drop in 1–2 tablea, and add sugar to taste" },
+      { n: "03", t: "Stir", d: "E Whisk/mix until fully melted and if tanaw nimo okay na." },
+      { n: "04", t: "Enjoy", d: "Pour into a bowl and its ready to serve." },
     ],
   },
   {
-    title: "Iced Tablea Drink",
-    subtitle: "Cold, rich, and refreshing.",
-    ingredients: ["1–2 tablea discs", "1/2 cup hot water", "1 cup cold milk", "Ice cubes"],
+    title: "Champorado",
+    subtitle: "Painit, simple and perfect para meryenda",
+    ingredients: ["1–2 tablea", "3 cup water", "milk to taste", "Sugar"],
     steps: [
-      { n: "01", t: "Melt Tablea", d: "Mix melted tablea with hot water until smooth." },
-      { n: "02", t: "Add Milk", d: "Pour in cold milk and stir well." },
-      { n: "03", t: "Add Ice", d: "Fill the glass with ice cubes." },
-      { n: "04", t: "Serve", d: "Enjoy your chilled homemade chocolate drink." },
+      { n: "01", t: "Melt Tablea", d: "Pakulu-a ang 3 ka tasa nga tubig sa kaldero. Ibutang ang 1 ka tasa nga bahaw ug sigeg stir hangtod tanaw nimo sakto na." },
+      { n: "02", t: "Add Milk", d: "Add the tablea and mix until fully melted and combined." },
+      { n: "03", t: "Add Ice", d: "Pour in milk (optional kung gusto nimo mas creamy) and add sugar to taste. Stir until creamy and smooth." },
+      { n: "04", t: "Serve", d: "Iserve nga init and enjoy you classic champorado." },
     ],
   },
 ];
@@ -278,7 +278,7 @@ function Prepare() {
                 {recipe.steps.map((s, i) => (
                   <Reveal key={`${recipe.title}-${s.n}`} delay={i * 100 + ri * 80}>
                     <div className="relative bg-card/90 backdrop-blur-sm border-2 border-border rounded-2xl p-8 h-full hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
-                      <span className="font-serif text-6xl text-accent/60 font-light">{s.n}</span>
+                      <span className="font-serif text-3xl text-accent/60 font-bold">{s.n}</span>
                       <h4 className="mt-4 font-serif text-2xl text-primary font-semibold">{s.t}</h4>
                       <p className="mt-3 text-sm text-muted-foreground leading-relaxed font-light">{s.d}</p>
                     </div>
@@ -294,12 +294,12 @@ function Prepare() {
 }
 
 const reasons = [
-  { n: "01", t: "Homemade", d: "Every disc shaped by hand in small batches." },
-  { n: "02", t: "Traditional Recipe", d: "A heritage formula from our grandmother." },
-  { n: "03", t: "Family Heritage", d: "Inspired by generations of Filipino kitchens." },
-  { n: "04", t: "Made with Care", d: "Slow, patient, never rushed." },
-  { n: "05", t: "Authentic Taste", d: "Pure cacao — nothing artificial." },
-  { n: "06", t: "From Bohol", d: "Crafted at the heart of the islands." },
+  { n: "01", t: "Homemade", d: "Tanan among tablea gihimo ra sa balay pinaagi sa among mama." },
+  { n: "02", t: "Traditional Recipe", d: "A local recipe nga gikan pa sa among lola." },
+  { n: "03", t: "Authentic", d: "Made through generations while naa gihapon ang authentic na lasa ani." },
+  { n: "04", t: "Made with Care", d: "Ginahimo with genuine care ug tarong nga preparation." },
+  { n: "05", t: "Authentic Taste", d: "Pure cacao ra ang gigamit, no artificial ingredients." },
+  { n: "06", t: "Locally made", d: "Proudly handmade diri sa Poblacion, Inabanga, Bohol" },
 ];
 
 function Why() {
@@ -318,8 +318,8 @@ function Why() {
                   {r.n}
                 </span>                
                 <div className="mt-4 h-px w-10 bg-accent/40" />
-                <h3 className="mt-5 font-serif text-xl text-primary font-semibold">{r.t}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed font-light">{r.d}</p>
+                <h3 className="mt-5 font-serif text-2xl text-primary font-semibold">{r.t}</h3>
+                <p className="mt-3 text-l text-muted-foreground leading-relaxed font-light">{r.d}</p>
               </div>
             </Reveal>
           ))}
