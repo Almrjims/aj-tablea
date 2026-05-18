@@ -220,6 +220,7 @@ const recipes = [
   {
     title: "Traditional Sikwate",
     subtitle: "Simple, warm, and rewarding.",
+    ingredients: ["1–2 tablea discs", "1 cup water or milk", "Sugar or muscovado (optional)"],
     steps: [
       { n: "01", t: "Boil", d: "Bring water or milk gently to a boil in your kaldero." },
       { n: "02", t: "Add Tablea", d: "Drop in 1–2 tablea discs per cup." },
@@ -230,6 +231,7 @@ const recipes = [
   {
     title: "Iced Tablea Drink",
     subtitle: "Cold, rich, and refreshing.",
+    ingredients: ["1–2 tablea discs", "1/2 cup hot water", "1 cup cold milk", "Ice cubes"],
     steps: [
       { n: "01", t: "Melt Tablea", d: "Mix melted tablea with hot water until smooth." },
       { n: "02", t: "Add Milk", d: "Pour in cold milk and stir well." },
