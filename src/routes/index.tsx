@@ -363,6 +363,8 @@ function Footer() {
           <p className="opacity-80 font-light">Facebook · Alma O. Ybañez</p>
           <p className="opacity-80 font-light">Messenger · Alma O. Ybañez</p>
           <a href="tel:+639162559546" className="block opacity-80 hover:opacity-100 font-light transition">+63 916 255 9546</a>
+          <p className="opacity-80 font-light">Based in Poblacion, Inabanga, Bohol</p>
+          <p className="opacity-80 font-light">Available for local orders and inquiries</p>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 py-6 text-center text-xs opacity-70 font-light">
